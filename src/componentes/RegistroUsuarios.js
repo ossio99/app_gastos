@@ -155,4 +155,4 @@ const RegistroUsuarios = () => {
 	)
 }
 
-export default RegistroUsuarios
+export default RegistroUsuarios;
