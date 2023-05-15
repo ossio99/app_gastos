@@ -13,8 +13,10 @@ const formatFecha = (fecha = new Date()) => {
 }
 
 const DatePicker = ({ fecha, cambiarFecha }) => {
+    //estado para mostrar el datePicker
     const [datePicker, cambiarDatePicker] = useState(false);
 
+    //agregue esto para que cuando se seleccione una fecha se oculte el datePicker
     useEffect(() => {
         cambiarDatePicker(false)
     
@@ -27,10 +29,12 @@ const DatePicker = ({ fecha, cambiarFecha }) => {
             {datePicker &&
                 <DayPicker 
                     mode="single" 
+                    //valor inicial que mostrara
                     selected={fecha} 
+                    //nuevo valor seleccionado
                     onSelect={cambiarFecha} 
+                    //formato español
                     locale={es}
-                    // onClick={() => cambiarDatePicker(!datePicker)}
                 />
             }
         </ContenedorInput>
