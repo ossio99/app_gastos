@@ -47,7 +47,7 @@ root.render(
 									<ListaDeGastos />
 								</RutaPrivada>
 							}/>
-							<Route path='/editar:id' element={
+							<Route path='/editar/:id' element={
 								<RutaPrivada>
 									<EditarGasto />
 								</RutaPrivada>
