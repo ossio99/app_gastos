@@ -1,6 +1,6 @@
 import React, { useContext, useState, useEffect } from "react";
 import { auth } from "../firebase/firebaseConfig";
-import { onAuthStateChanged } from "firebase/auth";
+import { onAuthStateChanged, signInWithEmailAndPassword } from "firebase/auth";
 
 //creamos el contexto
 const AuthContext = React.createContext();
@@ -24,17 +24,18 @@ const AuthProvider = ({ children }) => {
         //este objeto solo es devuelto si se inicio sesion, osea si se ejecuto signInWithEmailAndPassword anteriormente si no devolvera null
         //onAuthStateChanged devuelve un metodo para cancelar la suscripcion
         const cancelarSuscripcion = onAuthStateChanged(auth, (usuario) => {
-            // console.log(usuario);
+            console.log(auth._currentUser);
             cambiarUsuario(usuario);
             cambiarCargando(false);
-        })
+        });
 
-        return cancelarSuscripcion();
+        return cancelarSuscripcion;
     }, [])
 
 
     return (
-        <AuthContext.Provider value={{ usuario }}>
+        //quitar del estado global y de inicio de sesion
+        <AuthContext.Provider value={{ usuario, cambiarUsuario }}>
             {/* solo renderizamos children cuando cargando sea false
             ya que cuando cargando solo sera false  hasta que onAuthStateChanged
             se haya ejecutado, de esta forma nos aseguramos de no cargar el resto de 

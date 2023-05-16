@@ -6,7 +6,7 @@ const agregarGasto = async ({descripcion, cantidad, categoria, fecha, uidUsuario
     //si la promesa es devuelta resetearemos los inputs y mandaremos una alerta
     return await addDoc(collection(db, 'gastos'),{
         descripcion,
-        cantidad,
+        cantidad: Number(cantidad),
         categoria,
         fecha,
         uidUsuario

@@ -9,7 +9,7 @@ const editarGasto = async ({ id, descripcion, cantidad, categoria, fecha }) => {
     //si la promesa es devuelta resetearemos los inputs y mandaremos una alerta
     return await updateDoc(documento, {
         descripcion,
-        cantidad,
+        cantidad: Number(cantidad),
         categoria,
         fecha
     });

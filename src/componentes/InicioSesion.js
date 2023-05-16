@@ -7,8 +7,9 @@ import { ReactComponent as SvgLogin } from '../imagenes/login.svg'
 import styled from 'styled-components'
 import { useNavigate } from 'react-router-dom'
 import { auth } from '../firebase/firebaseConfig'
-import {signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 import Alerta from '../elementos/Alerta'
+import { useAuth } from '../contextos/AuthContext'
 
 
 const Svg = styled(SvgLogin)`
@@ -23,6 +24,8 @@ const InicioSesion = () => {
 	const [password, establecerPassword] = useState('');
 	const [estadoAlerta, cambiarEstadoAlerta] = useState(false);
 	const [alerta, cambiarAlerta] = useState({});
+
+	const {usuario, cambiarUsuario} = useAuth();
 
 	const handleChange = (e) => {
 		if (e.target.name === 'email') {
@@ -60,6 +63,8 @@ const InicioSesion = () => {
 		try {
 			await signInWithEmailAndPassword(auth, correo, password)
 			navigate('/')
+			// cambiarUsuario()
+			console.log(usuario);
 		} catch (error) {
 			// console.log(error);
 			// console.log(error.code);
@@ -119,7 +124,7 @@ const InicioSesion = () => {
 				</ContenedorBoton>
 			</Formulario>
 
-			<Alerta tipo={alerta.tipo} mensaje={alerta.mensaje} estadoAlerta={estadoAlerta} cambiarEstadoAlerta={cambiarEstadoAlerta}/>
+			<Alerta tipo={alerta.tipo} mensaje={alerta.mensaje} estadoAlerta={estadoAlerta} cambiarEstadoAlerta={cambiarEstadoAlerta} />
 
 		</>
 	)

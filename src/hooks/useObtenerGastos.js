@@ -9,6 +9,7 @@ const useObtenerGastos = () => {
     const {usuario} = useAuth();
     const [ultimoGasto, cambiarUltimoGasto] = useState(null);
     const [hayMasPorCargar, cambiarHayMasPorCargar] = useState(false);
+    // console.log(usuario);
 
     //al ejecutarse este metodo se ejecuta onSnapshot a partir del ultimo gasto anterior
     //si gastos > 0 asignamos nuevo ultomoGasto y cambiamos gastos
@@ -27,6 +28,7 @@ const useObtenerGastos = () => {
 
                 //concatenamos a gastos los nuevos gastos que se consultaron
                 cambiarGastos(gastos.concat(snapshot.docs.map((gasto) => {
+                    console.log(gasto.docs);
                     return {...gasto.data(), id: gasto.id}
                 })))
             }else {

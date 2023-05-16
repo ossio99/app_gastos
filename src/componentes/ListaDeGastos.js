@@ -7,8 +7,6 @@ import useObtenerGastos from '../hooks/useObtenerGastos'
 import {
     Lista,
     ElementoLista,
-    ListaDeCategorias,
-    ElementoListaCategorias,
     Categoria,
     Descripcion,
     Valor,
