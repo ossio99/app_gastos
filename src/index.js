@@ -44,16 +44,19 @@ root.render(
 										<GastosPorCategoria />
 									</RutaPrivada>
 								}/>
+
 								<Route path='/lista' element={
 									<RutaPrivada>
 										<ListaDeGastos />
 									</RutaPrivada>
 								}/>
+
 								<Route path='/editar/:id' element={
 									<RutaPrivada>
 										<EditarGasto />
 									</RutaPrivada>
 								}/>
+								
 								<Route path='/' element={
 									<RutaPrivada>
 										<App />

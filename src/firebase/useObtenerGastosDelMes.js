@@ -22,8 +22,6 @@ const useObtenerGastosDelMes = () => {
                 where('uidUsuario', '==', usuario.uid)
             );
 
-            // console.log(consulta);
-
             const unsuscribe = onSnapshot(consulta, (snapshot) => {
                 establecerGastos(snapshot.docs.map((documento) => {
                     return { ...documento.data(), id: documento.id }

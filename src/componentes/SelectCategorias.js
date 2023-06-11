@@ -54,6 +54,13 @@ const ContenedorSelect = styled.div`
     &:hover {
         background: ${theme.grisClaro2};
     }
+
+    // @media (max-width: 60rem) {
+    //     /* 950px */
+    //     & > * {
+    //         width: 100%;
+    //     }
+    // }
 `;
 
 const OpcionSeleccionada = styled.div`
@@ -78,6 +85,7 @@ const Opciones = styled.div`
     border-radius: 0.625rem; /* 10px */
     max-height: 18.75rem; /* 300px */
     overflow-y: auto;
+    z-index: 1;
 `;
 
 const Opcion = styled.div`

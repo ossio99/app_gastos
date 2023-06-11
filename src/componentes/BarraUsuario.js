@@ -1,18 +1,13 @@
 import React from 'react'
 import theme from '../theme'
 import styled from 'styled-components'
-import convertirAMoneda from '../funciones/convertirAMoneda'
-import {useTotalDelMes} from '../contextos/TotalGastadoEnElMesContext'
-import useObtenerGastosDelMes from '../firebase/useObtenerGastosDelMes'
 
 const BarraTotalGastado = () => {
-	const {total} = useTotalDelMes();
-	useObtenerGastosDelMes();
 
 	return (
 		<BarraTotal>
-			<p>Total gastado:</p>
-			<p>{convertirAMoneda(total)}</p>
+			<p>Usuario</p>
+			<p>Agelito</p>
 		</BarraTotal>
 	)
 }

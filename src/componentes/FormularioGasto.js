@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { ContenedorFiltros, Formulario, Input, InputGrande, ContenedorBoton } from '../elementos/ElementosDeFormulario'
 import Boton from '../elementos/Boton'
 import { ReactComponent as IconoPlus } from '../imagenes/plus.svg'
-import {ReactComponent as IconoEditar} from '../imagenes/editar.svg'
+import { ReactComponent as IconoEditar } from '../imagenes/editar.svg'
 import SelectCategorias from './SelectCategorias'
 import DatePicker from './DatePicker'
 import agregarGasto from '../firebase/agregarGasto'
@@ -45,8 +45,6 @@ const FormularioGasto = ({ gasto }) => {
                 navigate('/lista');
             }
         }
-
-        // }, []);
     }, [gasto, usuario, navigate]);
 
     const handleChange = (e) => {
@@ -65,7 +63,7 @@ const FormularioGasto = ({ gasto }) => {
 
 
 
-        //compromaos que haya una descripcion y valor
+        //comprobamos que haya una descripcion y valor
         if (inputDescripcion !== '' && inputCantidad !== '') {
 
             //si por alguna razon alguien pudiera poner otro caracter en input cantidad
@@ -154,10 +152,9 @@ const FormularioGasto = ({ gasto }) => {
                 </div>
                 <ContenedorBoton>
                     <Boton as='button' primario conIcono type='submit'>
-                        {/* Editar gasto < IconoPlus /> */}
                         {gasto ?
-                            'Editar gasto' 
-                        :
+                            'Editar gasto'
+                            :
                             'Agregar gasto'
                         }
                         {gasto ? < IconoEditar /> : < IconoPlus />}
@@ -170,8 +167,6 @@ const FormularioGasto = ({ gasto }) => {
                     cambiarEstadoAlerta={cambiarEstadoAlerta}
                 />
             </Formulario>
-            {/* //al parecer este componente nel, video 99 creando el hook para obtener un gasto por id se ve que en EditarGasto se usa este componente de Formulario y no tiene la BarraTotalGastado */}
-            <BarraTotalGastado />
         </>
     )
 }

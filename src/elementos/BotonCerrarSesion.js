@@ -11,7 +11,6 @@ const BotonCerrarSesion = () => {
 	const cerrarSesion = async () => {
 		try {
 			await signOut(auth);
-			console.log(auth);
 			navigate('/iniciar-sesion');
 
 		} catch (error) {

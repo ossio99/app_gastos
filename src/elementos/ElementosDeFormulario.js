@@ -10,7 +10,7 @@ const ContenedorFiltros = styled.div`
         flex-direction: column;
  
         & > * {
-            width: 100%;
+            width: 100% !important;
             margin-bottom: 0.62rem; /* 10px */
         }
     }

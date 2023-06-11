@@ -24,7 +24,6 @@ const AuthProvider = ({ children }) => {
         //este objeto solo es devuelto si se inicio sesion, osea si se ejecuto signInWithEmailAndPassword anteriormente si no devolvera null
         //onAuthStateChanged devuelve un metodo para cancelar la suscripcion
         const cancelarSuscripcion = onAuthStateChanged(auth, (usuario) => {
-            console.log(auth._currentUser);
             cambiarUsuario(usuario);
             cambiarCargando(false);
         });

@@ -7,7 +7,7 @@ const Contenedor = styled.div`
     max-width: 70rem; /*1110px*/
     height: 90vh;
     // max-height: 50rem;  /* 800px */
-    max-height: 57rem;  /* 800px */
+    max-height: 62.5rem;  /* 800px */
     overflow-y: auto;
     box-shadow: 0px 1.25rem 2.5rem rgba(0,0,0,.05);
     border-radius: 0.625rem; /* 10px */

@@ -12,6 +12,7 @@ const GastosPorCategoria = () => {
 
 
 	let gastosPorCategoria = useObtenerGastosDelMesPorCategoria();
+	console.log(gastosPorCategoria);
 
 	return (
 		<>

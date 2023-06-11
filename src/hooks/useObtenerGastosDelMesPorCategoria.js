@@ -5,7 +5,7 @@ const useObtenerGastosDelMesPorCategoria = () => {
     const [gastosPorCategoria, cambiarGastosPorCategoria] = useState();
     const gastos = useObtenerGastosDelMes();
 
-    // console.log(gastos);
+    console.log(gastos);
 
     useEffect(() => {
         //nos va a devolver en este caso un objeto con la suma de cada categoria
@@ -15,6 +15,7 @@ const useObtenerGastosDelMesPorCategoria = () => {
             const cantidadActual = objetoActual.cantidad;
 
             //sintaxis para acceder a una propiedad de un objeto de manera dinamica
+            //o sea que lo que esta dentro de los corchetes sera el valor del objeto final el que coincida con la propiedad que extrajimos del objeto actual
             objetoResultante[categoriaActual] += cantidadActual;
 
             // se devuelve objetoResultante en cada iteración, esto asegura que el objeto acumulador se actualice en cada iteración y se pase al siguiente elemento del array
