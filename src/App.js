@@ -11,7 +11,7 @@ function App() {
 	return (
 		<>
 			<Helmet>
-				<title>Agregar gasto</title>
+				<title>Prueba desde vs code</title>
 			</Helmet>
 			{/* <BarraUsuario /> */}
 			<Header>
