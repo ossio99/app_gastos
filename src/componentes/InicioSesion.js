@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Header, Titulo, ContenedorHeader, ContenedorBotones } from '../elementos/Header'
+import { Header, Titulo, ContenedorHeader } from '../elementos/Header'
 import { Helmet } from 'react-helmet'
 import Boton from '../elementos/Boton'
 import { Formulario, Input, ContenedorBoton } from '../elementos/ElementosDeFormulario'
@@ -9,7 +9,6 @@ import { useNavigate } from 'react-router-dom'
 import { auth } from '../firebase/firebaseConfig'
 import { signInWithEmailAndPassword } from "firebase/auth";
 import Alerta from '../elementos/Alerta'
-import { useAuth } from '../contextos/AuthContext'
 
 
 const Svg = styled(SvgLogin)`
