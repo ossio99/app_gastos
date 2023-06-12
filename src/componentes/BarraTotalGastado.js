@@ -3,7 +3,7 @@ import theme from '../theme'
 import styled from 'styled-components'
 import convertirAMoneda from '../funciones/convertirAMoneda'
 import {useTotalDelMes} from '../contextos/TotalGastadoEnElMesContext'
-import useObtenerGastosDelMes from '../firebase/useObtenerGastosDelMes'
+import useObtenerGastosDelMes from '../hooks/useObtenerGastosDelMes'
 
 const BarraTotalGastado = () => {
 	const {total} = useTotalDelMes();

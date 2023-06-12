@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { db } from './firebaseConfig';
+import { db } from '../firebase/firebaseConfig';
 import { collection, onSnapshot, orderBy, query, where } from 'firebase/firestore';
 import { endOfMonth, startOfMonth, getUnixTime } from 'date-fns'
 import { useAuth } from '../contextos/AuthContext'
@@ -11,7 +11,6 @@ const useObtenerGastosDelMes = () => {
     useEffect(() => {
         const inicioDeMes = getUnixTime(startOfMonth(new Date()));
         const finDeMes = getUnixTime(endOfMonth(new Date()));
-        // console.log(usuario);
 
         if (usuario) {
             const consulta = query(

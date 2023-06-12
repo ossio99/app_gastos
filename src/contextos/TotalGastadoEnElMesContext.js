@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from 'react'
-import useObtenerGastosDelMes from '../firebase/useObtenerGastosDelMes';
+import useObtenerGastosDelMes from '../hooks/useObtenerGastosDelMes';
 
 const TotalGastadoContext = React.createContext();
 

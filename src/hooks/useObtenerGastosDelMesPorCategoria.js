@@ -1,11 +1,9 @@
 import { useEffect, useState } from 'react'
-import useObtenerGastosDelMes from '../firebase/useObtenerGastosDelMes';
+import useObtenerGastosDelMes from './useObtenerGastosDelMes';
 
 const useObtenerGastosDelMesPorCategoria = () => {
     const [gastosPorCategoria, cambiarGastosPorCategoria] = useState();
     const gastos = useObtenerGastosDelMes();
-
-    console.log(gastos);
 
     useEffect(() => {
         //nos va a devolver en este caso un objeto con la suma de cada categoria

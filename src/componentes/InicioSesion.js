@@ -25,7 +25,7 @@ const InicioSesion = () => {
 	const [estadoAlerta, cambiarEstadoAlerta] = useState(false);
 	const [alerta, cambiarAlerta] = useState({});
 
-	const {usuario, cambiarUsuario} = useAuth();
+	// const {usuario, cambiarUsuario} = useAuth();
 
 	const handleChange = (e) => {
 		if (e.target.name === 'email') {
@@ -64,10 +64,7 @@ const InicioSesion = () => {
 			await signInWithEmailAndPassword(auth, correo, password)
 			navigate('/')
 			// cambiarUsuario()
-			console.log(usuario);
 		} catch (error) {
-			// console.log(error);
-			// console.log(error.code);
 			let mensaje;
 			switch (error.code) {
 				case 'auth/wrong-password':
