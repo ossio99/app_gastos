@@ -16,7 +16,7 @@ function App() {
 			{/* <BarraUsuario /> */}
 			<Header>
 				<ContenedorHeader>
-					<Titulo>Prueba desde vs code</Titulo>
+					<Titulo>Agregar gasto</Titulo>
 					<ContenedorBotones>
 						<Boton to='/categorias'>Categorías</Boton>
 						<Boton to='/lista'>Lista de gastos</Boton>
