@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Header, Titulo, ContenedorHeader, ContenedorBotones } from '../elementos/Header'
+import { Header, Titulo, ContenedorHeader } from '../elementos/Header'
 import { Helmet } from 'react-helmet'
 import Boton from '../elementos/Boton'
 import { Formulario, Input, ContenedorBoton } from '../elementos/ElementosDeFormulario'

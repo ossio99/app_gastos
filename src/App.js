@@ -11,12 +11,12 @@ function App() {
 	return (
 		<>
 			<Helmet>
-				<title>Prueba desde vs code</title>
+				<title>Agregar gasto</title>
 			</Helmet>
 			{/* <BarraUsuario /> */}
 			<Header>
 				<ContenedorHeader>
-					<Titulo>Agregar gasto</Titulo>
+					<Titulo>Prueba desde vs code</Titulo>
 					<ContenedorBotones>
 						<Boton to='/categorias'>Categorías</Boton>
 						<Boton to='/lista'>Lista de gastos</Boton>

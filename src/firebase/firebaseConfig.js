@@ -20,7 +20,8 @@ const firebaseConfig = {
 
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+// eslint-disable-next-line
+const app = initializeApp(firebaseConfig); 
 
 //segun la doc se les tiene que pasar la app
 //objeto con propiedades y metodos de firebase authentication

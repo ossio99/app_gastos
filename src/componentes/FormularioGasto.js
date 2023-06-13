@@ -10,7 +10,6 @@ import fromUnixTime from 'date-fns/fromUnixTime'
 import getUnixTime from 'date-fns/getUnixTime'
 import { useAuth } from '../contextos/AuthContext'
 import Alerta from '../elementos/Alerta'
-import BarraTotalGastado from './BarraTotalGastado'
 import { useNavigate } from 'react-router-dom';
 import editarGasto from '../firebase/editarGasto'
 

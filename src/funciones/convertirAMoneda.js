@@ -1,5 +1,3 @@
-import React from 'react'
-
 const formatearCantidad = (cantidad) => {
   return (
     Intl.NumberFormat('en-US', {
