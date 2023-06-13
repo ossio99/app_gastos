@@ -16,7 +16,7 @@ function App() {
 			{/* <BarraUsuario /> */}
 			<Header>
 				<ContenedorHeader>
-					<Titulo>Hola??</Titulo>
+					<Titulo>wasade</Titulo>
 					{/* <Titulo>Agregar gasto</Titulo> */}
 					<ContenedorBotones>
 						<Boton to='/categorias'>Categorías</Boton>
