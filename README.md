@@ -18,7 +18,7 @@ Firebase cloud firestore para almacenar los gastos de los usuarios
 Firebase hosting para hospedar nuestra app  
 
 ### Deploy
-[enlace en línea](http://www.limni.net)
+[click para empezar a registrar tus gastos](https://app-gastos-2.web.app/)
 
 
 
